@@ -1,1 +1,45 @@
-<p>dashboard works!</p>
+<table mat-table [dataSource]="allRestaurants" class="mat-elevation-z8">
+
+
+	<ng-container matcolumndef="position">
+		<th mat-header-cell *matheadercelldef>
+			No.
+		</th>
+		<td mat-cell *matcelldef="let element">
+			{{element.position}}
+		</td>
+	</ng-container>
+
+
+	<ng-container matcolumndef="name">
+		<th mat-header-cell *matheadercelldef>
+			Name
+		</th>
+		<td mat-cell *matcelldef="let element">
+			{{element.name}}
+		</td>
+	</ng-container>
+
+
+	<ng-container matcolumndef="weight">
+		<th mat-header-cell *matheadercelldef>
+			Weight
+		</th>
+		<td mat-cell *matcelldef="let element">
+			{{element.weight}}
+		</td>
+	</ng-container>
+
+
+	<ng-container matcolumndef="symbol">
+		<th mat-header-cell *matheadercelldef>
+			Symbol
+		</th>
+		<td mat-cell *matcelldef="let element">
+			{{element.symbol}}
+		</td>
+	</ng-container>
+
+	<tr mat-header-row *matheaderrowdef="displayedColumns"></tr>
+	<tr mat-row *matrowdef="let row; columns: displayedColumns;"></tr>
+</table>
