@@ -16,4 +16,11 @@ export class RestaurantService {
     return this.http.get<Restaurant[]>("http://localhost:3000/Restaurants");
   }
 
+  //Add records 
+
+  create(payload: Restaurant): Observable<Restaurant> {
+    return this.http.post<Restaurant>("http://localhost:3000/Restaurants", payload);
+
+  }
+
 }
