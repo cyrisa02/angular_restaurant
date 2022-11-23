@@ -12,8 +12,8 @@ export class RestaurantService {
 
   //get all records
 
-  getAll(): Observable<Restaurant> {
-    return this.http.get<Restaurant>("http://localhost:3000/Restaurants");
+  getAll(): Observable<Restaurant[]> {
+    return this.http.get<Restaurant[]>("http://localhost:3000/Restaurants");
   }
 
 }

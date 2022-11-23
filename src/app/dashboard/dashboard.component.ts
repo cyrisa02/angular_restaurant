@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Restaurant } from '../restaurant';
+import { RestaurantService } from '../restaurant.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,9 +11,16 @@ export class DashboardComponent implements OnInit {
   allRestaurants: Restaurant[] = [];
   displayedColumns: string[] = ['id', 'name', 'owner', 'mobile', 'email', 'location'];
 
-  constructor() { }
+  constructor(private restaurant: RestaurantService) { }
 
   ngOnInit(): void {
+    this.getAllRestaurants();
+  }
+
+  getAllRestaurants() {
+    this.restaurant.getAll().subscribe((data) => {
+      this.allRestaurants = data;
+    })
   }
 
 }
