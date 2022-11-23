@@ -23,4 +23,16 @@ export class RestaurantService {
 
   }
 
+  // Get records by Id
+
+  getbyId(id: number): Observable<Restaurant> {
+    return this.http.get<Restaurant>(`http://localhost:3000/Restaurants/${id}`);
+  }
+
+  //update Records
+
+  update(payload: Restaurant): Observable<Restaurant> {
+    return this.http.put<Restaurant>(`http://localhost:3000/Restaurants/${payload.id}`, payload);
+  }
+
 }

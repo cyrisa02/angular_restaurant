@@ -12,3 +12,4 @@ json-server --watch db.json   pour lancer le serveur
 8/ configuer le fichier restaurant.ts en json
 9 / Tableau  + getAll 
 10/ Fonction addRestaurant ng g c addRestaurant puis la route // puis la méthode ds restaurant.service / [(ngModel)] dans le html + FormsModule dans app.module 
+11/ Edit componenent ng g c editRestaurant puis la route avec /:id //   puis la méthode ds restaurant.service 
