@@ -8,6 +8,7 @@ import { Restaurant } from '../restaurant';
 })
 export class DashboardComponent implements OnInit {
   allRestaurants: Restaurant[] = [];
+  displayedColumns: string[] = ['id', 'name', 'owner', 'mobile', 'email', 'location'];
 
   constructor() { }
 
