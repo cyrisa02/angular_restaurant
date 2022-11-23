@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Restaurant } from '../restaurant';
+import { RestaurantService } from '../restaurant.service';
 
 @Component({
   selector: 'app-add-restaurant',
@@ -6,10 +9,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-restaurant.component.css']
 })
 export class AddRestaurantComponent implements OnInit {
-
-  constructor() { }
+  restaurantRecords: Restaurant = {
+    id: 0,
+    name: '',
+    owner: '',
+    mobile: '',
+    email: '',
+    location: ''
+  }
+  constructor(private restaurantService: RestaurantService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  addRecords() {
+    this.restaurantService.create(this.restaurantRecords).subscribe(() => {
+      this.router.navigate(["/"]);
+    })
+  }
 }

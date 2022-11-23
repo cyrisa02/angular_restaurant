@@ -7,7 +7,6 @@
       "mobile": "12345678",
       "email": "abc@gmail.com",
       "location": "Paris"
-
     },
     {
       "id": 2,
@@ -16,7 +15,6 @@
       "mobile": "45678778",
       "email": "jimy@gmail.com",
       "location": "Creil"
-
     },
     {
       "id": 3,
@@ -25,7 +23,14 @@
       "mobile": "456987678",
       "email": "jym@gmail.com",
       "location": "Levallois"
-
+    },
+    {
+      "id": 4,
+      "name": "New Food restaurant",
+      "owner": "John Doe",
+      "mobile": "06 15 60",
+      "email": "cyr@gmail.com",
+      "location": "Paris"
     }
   ]
 }
