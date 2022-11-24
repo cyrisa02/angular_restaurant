@@ -9,22 +9,6 @@
       "location": "Beauvais"
     },
     {
-      "id": 2,
-      "name": "Food Plaza Restaurant",
-      "owner": "Jimy Hendrix",
-      "mobile": "45678778",
-      "email": "jimy@gmail.com",
-      "location": "Creil"
-    },
-    {
-      "id": 3,
-      "name": "Chili Restaurant",
-      "owner": "Jym Morrison",
-      "mobile": "456987678",
-      "email": "jym@gmail.com",
-      "location": "Levallois"
-    },
-    {
       "id": 4,
       "name": "New Food restaurant",
       "owner": "John Doe",

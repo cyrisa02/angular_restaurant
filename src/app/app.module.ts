@@ -16,14 +16,16 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { EditRestaurantComponent } from './edit-restaurant/edit-restaurant.component';
-
+import { DeleteRestaurantComponent } from './delete-restaurant/delete-restaurant.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     AddRestaurantComponent,
-    EditRestaurantComponent
+    EditRestaurantComponent,
+    DeleteRestaurantComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,9 @@ import { EditRestaurantComponent } from './edit-restaurant/edit-restaurant.compo
     MatFormFieldModule,
     MatInputModule,
     MatCardModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

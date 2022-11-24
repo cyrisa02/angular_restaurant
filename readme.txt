@@ -13,3 +13,8 @@ json-server --watch db.json   pour lancer le serveur
 9 / Tableau  + getAll 
 10/ Fonction addRestaurant ng g c addRestaurant puis la route // puis la méthode ds restaurant.service / [(ngModel)] dans le html + FormsModule dans app.module 
 11/ Edit componenent ng g c editRestaurant puis la route avec /:id //   puis la méthode ds restaurant.service 
+12/ Delete création de la méthode dans le service / chercher dans Material une boite de Dialog / ng g c deleteRestaurant
+pbm mauvaise version de cdk Open up package.json file
+Add  "@angular/cdk": "^14.2.1", to dependencies section:
+Run npm install to update download the new package
+delete() dans le dashboard car le bouton delete est dans le dashboard
