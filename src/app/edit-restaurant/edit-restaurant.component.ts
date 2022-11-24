@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Restaurant } from '../restaurant';
 import { RestaurantService } from '../restaurant.service';
 
@@ -18,7 +18,7 @@ export class EditRestaurantComponent implements OnInit {
     location: ''
   }
 
-  constructor(private restaurantService: RestaurantService, private route: ActivatedRoute) { }
+  constructor(private restaurantService: RestaurantService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
@@ -30,6 +30,12 @@ export class EditRestaurantComponent implements OnInit {
   getById(id: number) {
     this.restaurantService.getbyId(id).subscribe((data) => {
       this.restaurantRecords = data;
+    })
+  }
+
+  updateRecords() {
+    this.restaurantService.update(this.restaurantRecords).subscribe(() => {
+      this.router.navigate(['/']);
     })
   }
 }
